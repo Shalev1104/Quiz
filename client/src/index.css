@@ -2,7 +2,10 @@
 :root {
   --inner: #1f2937;
   --outer: #111827;
+  --btn: #232b2b;
+  --btn-checked: #2e8b57;
   --hover: #374151;
+  --disabled: #ccc;
 }
 
 body {
