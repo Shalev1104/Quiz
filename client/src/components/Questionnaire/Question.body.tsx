@@ -1,8 +1,12 @@
-import { Question } from "../../../types";
+import { useContext } from "react";
+import { QuizContext } from "../../contexts/Quiz";
 import Answer from "./Answer";
 
-export default function QuestionBody({ question, answers }: Question) {
-    
+export default function QuestionBody() {
+
+    const { currentQuestion } = useContext(QuizContext);
+    const { answers, question } = currentQuestion;
+
     return (
         <div className="question-body">
             <h1>{question}</h1>

@@ -1,13 +1,15 @@
 
-.questionnaire {
+.questionnaire, .result {
     display: inline-block;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 500px;
+    height: min-content;
     background-color: var(--inner);
     border-radius: 30px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--text);
     overflow: hidden;
 }
 
@@ -24,8 +26,7 @@
 }
 
 .answer {
-    background-color: var(--outer);
-    color: white;
+    color: inherit;
     text-align: inherit;
     border: 2px solid var(--hover);
     border-radius: 10px;
@@ -45,16 +46,14 @@
     font-size: large;
 }
 
-.question-header { border-bottom: 1px solid white; }
-
 .question-footer {
     display: flex;
     flex-direction: column;
 }
 
-.prev, .next, .finish, .page {
+.prev, .next, .finish, .page, .back {
     background-color: var(--btn);
-    color: white;
+    color: inherit;
     margin: 2px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -62,7 +61,7 @@
     transition: .5s;
 }
 
-.prev:not(:disabled):hover, .next:not(:disabled):hover, .finish:hover, .page:hover {
+.prev:not(:disabled):hover, .next:not(:disabled):hover, .finish:hover, .page:hover, .back:hover {
     font-weight: bold;
     cursor: pointer;
     transform: scale(1.1);

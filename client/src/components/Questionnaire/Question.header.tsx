@@ -1,12 +1,20 @@
-import { Category } from "../../../types";
+import { useContext } from "react";
+import { QuizContext } from "../../contexts/Quiz";
+import useTimer from "../../hooks/useTimer";
 
-export default function QuestionHeader({ category }: { category: Category['name'] }) {
+export default function QuestionHeader() {
+    
+    const { timer, category, questionNo, finishQuiz } = useContext(QuizContext);
+    
+    const onExpire = () => finishQuiz();
+
+    const { minutes, seconds } = useTimer({ timestamp: timer, onExpire });
     
     return (
-        <div className="question-header">
-            <div>Question 5</div>
+        <header className="question-header">
+            <div>Question {questionNo}</div>
             <div>{category!.toUpperCase()}</div>
-            <div>10 : 00</div>
-        </div>
+            <div>{minutes} : {seconds}</div>
+        </header>
     );
 }

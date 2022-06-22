@@ -5,21 +5,21 @@
   --btn: #232b2b;
   --btn-checked: #2e8b57;
   --hover: #374151;
+  --text: white;
   --disabled: #ccc;
 }
 
 body {
-  color:white;
+  color: var(--text);
   font-family: monospace;
   background-color: var(--outer);
   text-align: center;
 }
-
 header {
   font-size: xx-large;
   font-weight: bold;
   padding: 20px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--text);
 }
 
 ::-webkit-scrollbar {
