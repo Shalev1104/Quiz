@@ -9,7 +9,6 @@ import code from '../../assets/code.svg';
 import food from '../../assets/food.svg';
 import history from '../../assets/history.svg';
 import music from '../../assets/music.svg';
-import Header from "../../components/Menu/Header";
 import './menu.css';
 import { Category } from "../../../types";
 
@@ -29,7 +28,6 @@ export default function Menu() {
 
     return (
         <>
-            <Header/>
             <h1>
                 Hi there! Please choose a category to get started
             </h1>

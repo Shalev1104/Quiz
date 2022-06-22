@@ -56,3 +56,8 @@ export type useQuiz = {
     category: Category['name'];
     questions: Quiz['questions'];
 }
+
+export type useTheme = {
+    darkTheme: boolean;
+    toggleTheme: () => void;
+}

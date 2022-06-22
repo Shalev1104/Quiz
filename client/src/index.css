@@ -1,5 +1,5 @@
 
-:root {
+[data-theme='dark'] {
   --inner: #1f2937;
   --outer: #111827;
   --btn: #232b2b;
@@ -7,6 +7,16 @@
   --hover: #374151;
   --text: white;
   --disabled: #ccc;
+}
+
+[data-theme='light'] {
+  --inner: #F4DFD0;
+  --outer: #DFBB9D;
+  --btn: #E6BA95;
+  --btn-checked: #c3e88d;
+  --hover: #DAD0C2;
+  --text: saddlebrown;
+  --disabled: #A0937D;
 }
 
 body {
@@ -20,6 +30,15 @@ header {
   font-weight: bold;
   padding: 20px;
   border-bottom: 1px solid var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header img {
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
 }
 
 ::-webkit-scrollbar {

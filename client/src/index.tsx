@@ -5,21 +5,23 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Menu from './pages/Menu/Menu';
 import Questionnaire from './pages/Questionnaire/Questionnaire';
 import QuizProvider from './contexts/Quiz';
-
+import ThemeProvider from './contexts/Theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-          <Route path="/" element={<Menu/>} />
-          <Route path="/:category" element={
+    <ThemeProvider>
+      <Router>
+        <Routes>
+            <Route path="/" element={<Menu/>} />
+            <Route path="/:category" element={
               <QuizProvider>
                 <Questionnaire />
               </QuizProvider>}
             />
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   </React.StrictMode>
 );
