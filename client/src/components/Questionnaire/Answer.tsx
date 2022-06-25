@@ -1,4 +1,4 @@
-import { Answer } from "../../../types";
+import { Answer } from "../../types";
 import { useContext } from "react";
 import { QuizContext } from "../../contexts/Quiz";
 

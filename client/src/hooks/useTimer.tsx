@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Timer } from "../../types";
+import { Timer } from "../types";
 
 export default function useTimer({ timestamp, onTick, onExpire }: Timer) {
     

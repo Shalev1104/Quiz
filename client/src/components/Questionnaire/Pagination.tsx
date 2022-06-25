@@ -1,4 +1,4 @@
-import { Pagination }  from "../../../types";
+import { Pagination }  from "../../types";
 
 export default function _Pagination({ pageNo, total, onClick, onPrev, onNext }: Pagination) {
 

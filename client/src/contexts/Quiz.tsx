@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { Question, Provider } from '../../types';
+import { Question, Provider } from '../types';
 import useQuiz from '../hooks/useQuiz';
 import questionData from '../lib/questions.json';
 

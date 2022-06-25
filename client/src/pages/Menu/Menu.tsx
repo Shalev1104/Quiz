@@ -10,7 +10,7 @@ import food from '../../assets/food.svg';
 import history from '../../assets/history.svg';
 import music from '../../assets/music.svg';
 import './menu.css';
-import { Category } from "../../../types";
+import { Category } from "../../types";
 
 export default function Menu() {
     const categories = [

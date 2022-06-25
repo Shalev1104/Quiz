@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export type Category = Image & {
     name: string;
 }
@@ -31,7 +29,7 @@ export type Pagination = {
 }
 
 export type Provider = {
-    children: ReactNode;
+    children: import('react').ReactNode;
 }
 
 export type Quiz = {

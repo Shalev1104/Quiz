@@ -1,4 +1,4 @@
-import { Category } from "../../../types";
+import { Category } from "../../types";
 
 export default function _Category({ name, url }: Category) {
     

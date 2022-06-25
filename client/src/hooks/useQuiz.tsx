@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Answer, Quiz, useQuiz } from '../../types';
+import { Answer, Quiz, useQuiz } from '../types';
 
 export default function _useQuiz({ category, questions }: useQuiz): Quiz {
     const QUESTIONS_TIMER  = 10 * 60;

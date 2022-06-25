@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { Provider, useTheme } from "../../types";
+import { Provider, useTheme } from "../types";
 import Header from "../components/Header";
 
 export const ThemeMode = createContext({} as useTheme);
