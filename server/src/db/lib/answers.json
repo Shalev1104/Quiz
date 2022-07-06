@@ -1,0 +1,11 @@
+[
+    { "question_id": 1, "answer": "Paris",  "is_correct": true  },
+    { "question_id": 1, "answer": "London", "is_correct": false },
+    { "question_id": 1, "answer": "Berlin", "is_correct": false },
+    { "question_id": 1, "answer": "Madrid", "is_correct": false },
+
+    { "question_id": 2, "answer": "Africa",     "is_correct": false },
+    { "question_id": 2, "answer": "Europe",     "is_correct": false },
+    { "question_id": 2, "answer": "Asia",       "is_correct": true  },
+    { "question_id": 2, "answer": "Antarctica", "is_correct": false }
+]

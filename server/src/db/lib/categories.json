@@ -1,0 +1,12 @@
+[
+    { "name": "animals", "url": "https://www.svgrepo.com/show/416525/animal-bishop-cartoon.svg" },
+    { "name": "health", "url": "https://www.svgrepo.com/show/276828/virus-problem.svg" },
+    { "name": "science", "url": "https://www.svgrepo.com/show/296911/physics.svg" },
+    { "name": "astronomy", "url": "https://www.svgrepo.com/show/395638/rocket.svg" },
+    { "name": "geography", "url": "https://www.svgrepo.com/show/245796/geography-map.svg" },
+    { "name": "sports", "url": "https://www.svgrepo.com/show/398385/sports-medal.svg" },
+    { "name": "code", "url": "https://www.svgrepo.com/show/294145/code.svg" },
+    { "name": "food", "url": "https://www.svgrepo.com/show/82190/food.svg" },
+    { "name": "history", "url": "https://www.svgrepo.com/show/121710/history.svg" },
+    { "name": "music", "url": "https://www.svgrepo.com/show/349299/apple-music.svg" }
+]
