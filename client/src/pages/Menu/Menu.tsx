@@ -4,6 +4,8 @@ import { Category } from "../../types";
 import useFetch from "../../hooks/useFetch";
 import { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
+import Loader from "../../components/Loader";
+import Error from "../../components/Error";
 
 export default function Menu() {
     const { pathname } = useLocation();
@@ -19,8 +21,8 @@ export default function Menu() {
                 Hi there! Please choose a category to get started
             </h1>
             <div className="container">
-            { loading && <p>Loading...</p> }
-            {error && <p className="error">{error}</p>}
+            {loading    && <Loader/>}
+            {error      && <Error message={error}/>}
             {categories && categories.map((category, index) => 
                 <Subject key={index} {...category} /> )}
             </div>

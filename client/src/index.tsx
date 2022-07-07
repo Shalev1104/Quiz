@@ -6,6 +6,7 @@ import Menu from './pages/Menu/Menu';
 import Questionnaire from './pages/Questionnaire/Questionnaire';
 import QuizProvider from './contexts/Quiz';
 import ThemeProvider from './contexts/Theme';
+import NotFound from './pages/404/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
@@ -22,6 +23,7 @@ root.render(
                 <Questionnaire />
               </QuizProvider>
             } />
+            <Route path="*" element={<NotFound/>} />
         </Routes>
       </Router>
     </ThemeProvider>

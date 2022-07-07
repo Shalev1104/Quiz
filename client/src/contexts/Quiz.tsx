@@ -4,6 +4,8 @@ import { Question, Provider } from '../types';
 import useFetch from '../hooks/useFetch';
 import { useReducer } from 'react';
 import quizReducer, { Actions, initialState } from '../reducers/QuizReducer';
+import Loader from '../components/Loader';
+import Error from '../components/Error';
 
 const QuizContext = createContext(initialState);
 
@@ -26,7 +28,7 @@ export default function QuizProvider({ children }: Provider) {
             dispatch({ type: Actions.SET_QUESTIONS, payload: {questions} });
     }, [questions]);
 
-    const quiz = {
+    const quiz: typeof initialState = {
         ...state,
         ...state.questions && {
             currentQuestion: state.questions[state.questionNo - 1],
@@ -43,14 +45,18 @@ export default function QuizProvider({ children }: Provider) {
         
         isSelected: (answer) => JSON.stringify(state.answers[state.questionNo - 1]) === JSON.stringify(answer),
         isAnswersMarked: () => state.answers.every(answer => answer !== undefined)
-    } as typeof initialState;
-
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div className={'error'}>{error}</div>;
+    }
 
     return (
-        <QuizContext.Provider value={quiz}>
-            {state.questions && children}
-        </QuizContext.Provider>
+        <>
+            <br />
+            { loading && <Loader/> }
+            { error   && <Error message={error}/> }
+            {(
+                <QuizContext.Provider value={quiz}>
+                    {state.questions && children}
+                </QuizContext.Provider>
+            )}
+        </>
     );
 }

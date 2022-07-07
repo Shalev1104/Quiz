@@ -60,3 +60,7 @@ export type useTheme = {
     darkTheme: boolean;
     toggleTheme: () => void;
 }
+
+export type Error = {
+    message: string;
+}
