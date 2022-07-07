@@ -57,3 +57,12 @@ header img {
 ::-webkit-scrollbar-thumb:hover {
   background-color: lightgray;
 }
+
+.error {
+  color: #ba3939;
+  background: #ffe0e0;
+  border: 1px solid #a33a3a;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 5px;
+}

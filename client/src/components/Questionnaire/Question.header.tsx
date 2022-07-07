@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { QuizContext } from "../../contexts/Quiz";
+import { useQuiz } from "../../contexts/Quiz";
 import useTimer from "../../hooks/useTimer";
 
 export default function QuestionHeader() {
     
-    const { timer, category, questionNo, finishQuiz } = useContext(QuizContext);
+    const { timer, category, questionNo, finishQuiz } = useQuiz();
     
     const onExpire = () => finishQuiz();
 
@@ -13,7 +12,7 @@ export default function QuestionHeader() {
     return (
         <header className="question-header">
             <div>Question {questionNo}</div>
-            <div>{category!.toUpperCase()}</div>
+            <div>{category.toUpperCase()}</div>
             <div>{minutes} : {seconds}</div>
         </header>
     );

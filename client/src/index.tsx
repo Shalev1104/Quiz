@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
 import Menu from './pages/Menu/Menu';
 import Questionnaire from './pages/Questionnaire/Questionnaire';
 import QuizProvider from './contexts/Quiz';
@@ -14,12 +14,14 @@ root.render(
     <ThemeProvider>
       <Router>
         <Routes>
-            <Route path="/" element={<Menu/>} />
-            <Route path="/:category" element={
+            <Route path="/" element={<Navigate to={'/categories'} />} />
+            <Route path="/categories" element={<Menu/>} />
+            <Route path="/categories/:category" element=
+            {
               <QuizProvider>
                 <Questionnaire />
-              </QuizProvider>}
-            />
+              </QuizProvider>
+            } />
         </Routes>
       </Router>
     </ThemeProvider>

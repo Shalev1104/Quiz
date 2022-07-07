@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { QuizContext } from "../../contexts/Quiz";
+import { useQuiz } from "../../contexts/Quiz";
 import Pagination from "./Pagination";
 
 export default function QuestionFooter() {
@@ -10,7 +9,7 @@ export default function QuestionFooter() {
         nextQuestion, 
         previousQuestion, 
         toggleQuestion, 
-        finishQuiz } = useContext(QuizContext);
+        finishQuiz } = useQuiz();
 
     return (
         <div className="question-footer">

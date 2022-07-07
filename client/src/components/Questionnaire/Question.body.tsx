@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { QuizContext } from "../../contexts/Quiz";
+import { useQuiz } from "../../contexts/Quiz";
 import Answer from "./Answer";
 
 export default function QuestionBody() {
 
-    const { currentQuestion } = useContext(QuizContext);
+    const { currentQuestion } = useQuiz();
     const { answers, question } = currentQuestion;
 
     return (

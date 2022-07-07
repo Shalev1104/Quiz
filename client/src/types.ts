@@ -35,11 +35,13 @@ export type Provider = {
 export type Quiz = {
     category: Category['name'];
     questions: Question[];
+    answers: Answer[];
     currentQuestion: Question;
     questionNo: Pagination['pageNo'];
     totalQuestions: Pagination['total'];
     timer: Timer['timestamp'];
     finish: boolean;
+    score: number;
     previousQuestion: Pagination['onPrev'];
     nextQuestion: Pagination['onNext'];	
     toggleQuestion: (questionNo: number) => void;
@@ -47,7 +49,6 @@ export type Quiz = {
     isSelected: (answer: Answer) => boolean;
     isAnswersMarked: () => boolean;
     finishQuiz: () => void;
-    score: () => number;
 }
 
 export type useQuiz = {

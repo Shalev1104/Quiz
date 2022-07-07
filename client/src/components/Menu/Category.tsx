@@ -1,9 +1,10 @@
+import { useLocation } from "react-router-dom";
 import { Category } from "../../types";
 
 export default function _Category({ name, url }: Category) {
-    
+    const { pathname } = useLocation();
     const handleClick = () => 
-        window.location.assign(name)
+        window.location.assign(`${pathname}/${name}`);
 
     return (
         <button className="category" onClick={handleClick}>

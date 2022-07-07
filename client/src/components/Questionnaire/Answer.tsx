@@ -1,9 +1,8 @@
 import { Answer } from "../../types";
-import { useContext } from "react";
-import { QuizContext } from "../../contexts/Quiz";
+import { useQuiz } from "../../contexts/Quiz";
 
 export default function _Answer(answer: Answer) {
-    const { onAnswer, isSelected } = useContext(QuizContext);
+    const { onAnswer, isSelected } = useQuiz();
     const color = `var(--${isSelected(answer) ? 'btn-checked' : 'outer'})`;
     
     return (

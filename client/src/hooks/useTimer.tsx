@@ -5,11 +5,6 @@ export default function useTimer({ timestamp, onTick, onExpire }: Timer) {
     
     const [time, setTime] = useState(timestamp);
     const timer = useRef<NodeJS.Timer>();
-
-    if (!time) {
-        clearInterval(timer.current);
-        onExpire?.();
-    }
     
     useEffect(() => {
         timer.current = setInterval(() => {
@@ -17,9 +12,15 @@ export default function useTimer({ timestamp, onTick, onExpire }: Timer) {
             onTick?.();
         }, 1000);
 
-        // Unmount
         return () => clearInterval(timer.current);
-    }, []);
+    }, [timer, onTick]);
+
+    useEffect(() => {
+        if (!time) {
+            clearInterval(timer.current);
+            onExpire?.();
+        }
+    }, [time, onExpire]);
 
     return {
         days: Math.floor(time / (60 * 24)),
