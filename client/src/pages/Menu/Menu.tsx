@@ -20,6 +20,9 @@ export default function Menu() {
             <h1>
                 Hi there! Please choose a category to get started
             </h1>
+            
+            <br /><br />
+            
             <div className="container">
             {loading    && <Loader/>}
             {error      && <Error message={error}/>}
